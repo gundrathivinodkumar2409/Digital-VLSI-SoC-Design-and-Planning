@@ -6,8 +6,7 @@ End-to-end physical design of a RISC-V SoC using the OpenLane flow on the open-s
 
 **A Project Showcase for the "Digital VLSI SoC Design and Planning" Workshop**
 
-**[Your Name]**
-`[Your Email]` | `[Your LinkedIn Profile URL]` | `[Your GitHub Profile URL]`
+**Gundrathi Vinod Kumar**
 
 ---
 
