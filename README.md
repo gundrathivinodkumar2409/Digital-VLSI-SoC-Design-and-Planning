@@ -140,4 +140,4 @@ This project was a rigorous and rewarding deep dive into the practical realities
 
 ### **8. Acknowledgements**
 
-I am sincerely grateful to the **[VLSI System Design (VSD) team]**( https://www.vlsisystemdesign.com/) for their exceptional mentorship. The structure and hands-on nature of this workshop were instrumental in my successful journey through the complex world of digital physical design.
+I am sincerely grateful to the [VLSI System Design (VSD) team]( https://www.vlsisystemdesign.com/) for their exceptional mentorship. The structure and hands-on nature of this workshop were instrumental in my successful journey through the complex world of digital physical design.
