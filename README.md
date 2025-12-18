@@ -20,21 +20,20 @@ This repository showcases the complete **RTL-to-GDSII physical design implementa
 
 The project culminated in a fully verified GDSII layout, successfully meeting all design specifications and passing a rigorous suite of industry-standard sign-off checks.
 
-![Final GDSII Layout](path/to/your/final_layout_view.png)
+![Final GDSII Layout]()
 ***Figure 1: The final GDSII layout of the SoC, showcasing the successful integration of over [e.g., 12,000] standard cells and a complete power and clock network.***
 
 | **Final Sign-off Metric**   | **Result**                          | **Status** |
 | --------------------------- | ----------------------------------- | ---------- |
 | **Technology Node**         | SkyWater 130nm                      | -          |
-| **Target Clock Frequency**  | [e.g., 25 MHz]                      | Met        |
+| **Target Clock Frequency**  | 83.33 MHz                           | Met        |
 | **Setup Violations (WNS)**  | 0.00 ns                             | ✅ **Pass**    |
 | **Hold Violations (WHS)**   | 0.00 ns                             | ✅ **Pass**    |
 | **Design Rule Check (DRC)** | 0 Errors                            | ✅ **Pass**    |
 | **Layout vs. Schematic (LVS)**| No Mismatches                       | ✅ **Pass**    |
 | **Antenna Violations**      | 0 Errors                            | ✅ **Pass**    |
-| **Total Die Area**          | [e.g., 90,000 um^2]                 | -          |
-| **Standard Cell Count**     | [e.g., ~12,000]                     | -          |
-
+| **Total Die Area**          | 1,547,700 µm² (1.55 mm²)            | -          |
+| **Standard Cell Count**     | 18,508                              | -          |```
 
 ---
 
