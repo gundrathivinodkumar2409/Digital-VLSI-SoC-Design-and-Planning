@@ -52,8 +52,8 @@ The physical design was executed using the structured, automated stages within t
 *   **Placement:** The standard cells were intelligently placed onto the core's site rows. This critical step optimizes for timing and congestion, directly impacting the final performance and routability of the design.
 *   **Clock Tree Synthesis (CTS):** A balanced clock tree was constructed to deliver the clock signal to all sequential elements with minimal skew, a fundamental requirement for a synchronous digital system.
 
-![Placement View](path/to/your/placement_view.png)
-***Figure 3: The design post-placement, with all 18,508 standard cells legally positioned.***
+[![Placement View](path/to/your/placement_view.png)
+](https://github.com/manjeet-vk/Digital-VLSI-SoC-Design-and-Planning/blob/main/Day-2/Images/22.png)***Figure 3: The design post-placement, with all 18,508 standard cells legally positioned.***
 
 #### **Stage 3: Routing and Final Integration**
 *   **Routing:** All logical connections in the netlist were transformed into physical metal interconnects using a multi-stage global and detailed router. This step meticulously avoids shorts and opens while adhering to all design rules.
