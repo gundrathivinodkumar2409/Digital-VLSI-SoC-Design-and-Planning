@@ -45,7 +45,7 @@ The physical design was executed using the structured, automated stages within t
 *   **Synthesis:** The process began by translating the Verilog RTL into a gate-level netlist using **Yosys**, mapping the design to the SKY130 standard cell library based on a **Synopsys Design Constraints (SDC)** file.
 *   **Floorplanning:** The physical hierarchy was then established. A floorplan was created defining the die area, core utilization, and I/O pad placement. A robust multi-layer Power Delivery Network (PDN) was synthesized to ensure stable power across the chip.
 
-![Floorplan View](path/to/your/floorplan_view.png)
+![Floorplan View](https://github.com/gundrathivinodkumar2409/Digital-VLSI-SoC-Design-and-Planning/blob/2aa20ef369f66f697c3d3dc15b55b55d298ea075/Flooerplan.png)
 ***Figure 2: The initialized floorplan, defining the chip's physical boundaries and power grid.***
 
 #### **Stage 2: Placement and Clock Tree Synthesis**
