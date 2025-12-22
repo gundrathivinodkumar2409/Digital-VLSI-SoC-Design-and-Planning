@@ -20,7 +20,7 @@ This repository documents the successful **RTL-to-GDSII physical design implemen
 
 The project culminated in a fully verified GDSII layout, successfully meeting all design specifications and passing a rigorous suite of industry-standard sign-off checks.
 
-![Final GDSII Layout]()
+[![Final GDSII Layout]()](https://github.com/manjeet-vk/Digital-VLSI-SoC-Design-and-Planning/blob/main/Day-5/Images/3.png)
 ***Figure 1: The final GDSII layout of the SoC, showcasing the successful integration of over [e.g., 12,000] standard cells and a complete power and clock network.***
 
 | **Final Sign-off Metric**   | **Result**                          | **Status** |
