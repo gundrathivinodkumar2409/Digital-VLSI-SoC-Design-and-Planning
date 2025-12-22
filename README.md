@@ -20,8 +20,8 @@ This repository documents the successful **RTL-to-GDSII physical design implemen
 
 The project culminated in a fully verified GDSII layout, successfully meeting all design specifications and passing a rigorous suite of industry-standard sign-off checks.
 
-[![Final GDSII Layout]()](https://github.com/manjeet-vk/Digital-VLSI-SoC-Design-and-Planning/blob/main/Day-5/Images/3.png)
-***Figure 1: The final GDSII layout of the SoC, showcasing the successful integration of over [e.g., 12,000] standard cells and a complete power and clock network.***
+![[Final GDSII Layout](path/to/your/final_layout_view.png)](https://github.com/manjeet-vk/Digital-VLSI-SoC-Design-and-Planning/blob/main/Day-5/Images/3.png)
+***Figure 1: The final GDSII layout of the SoC, showcasing the successful integration of 18,508 standard cells and a complete power and clock network.***
 
 | **Final Sign-off Metric**   | **Result**                          | **Status** |
 | --------------------------- | ----------------------------------- | ---------- |
@@ -33,7 +33,7 @@ The project culminated in a fully verified GDSII layout, successfully meeting al
 | **Layout vs. Schematic (LVS)**| No Mismatches                       | ✅ **Pass**    |
 | **Antenna Violations**      | 0 Errors                            | ✅ **Pass**    |
 | **Total Die Area**          | 1,547,700 µm² (1.55 mm²)            | -          |
-| **Standard Cell Count**     | 18,508                              | -          |```
+| **Standard Cell Count**     | 18,508                              | -          |
 
 ---
 
@@ -43,7 +43,7 @@ The physical design was executed using the structured, automated stages within t
 
 #### **Stage 1: Synthesis and Floorplanning**
 *   **Synthesis:** The process began by translating the Verilog RTL into a gate-level netlist using **Yosys**, mapping the design to the SKY130 standard cell library based on a **Synopsys Design Constraints (SDC)** file.
-*   **Floorplanning:** The physical hierarchy was then established. A floorplan was created defining the die area, core utilization (**[~50%]**), and I/O pad placement. A robust multi-layer Power Delivery Network (PDN) was synthesized to ensure stable power across the chip.
+*   **Floorplanning:** The physical hierarchy was then established. A floorplan was created defining the die area, core utilization, and I/O pad placement. A robust multi-layer Power Delivery Network (PDN) was synthesized to ensure stable power across the chip.
 
 ![Floorplan View](path/to/your/floorplan_view.png)
 ***Figure 2: The initialized floorplan, defining the chip's physical boundaries and power grid.***
@@ -53,7 +53,7 @@ The physical design was executed using the structured, automated stages within t
 *   **Clock Tree Synthesis (CTS):** A balanced clock tree was constructed to deliver the clock signal to all sequential elements with minimal skew, a fundamental requirement for a synchronous digital system.
 
 ![Placement View](path/to/your/placement_view.png)
-***Figure 3: The design post-placement, with all standard cells legally positioned.***
+***Figure 3: The design post-placement, with all 18,508 standard cells legally positioned.***
 
 #### **Stage 3: Routing and Final Integration**
 *   **Routing:** All logical connections in the netlist were transformed into physical metal interconnects using a multi-stage global and detailed router. This step meticulously avoids shorts and opens while adhering to all design rules.
@@ -66,7 +66,7 @@ The physical design was executed using the structured, automated stages within t
 This section demystifies the key terminology and crucial stages of the RTL-to-GDSII flow. The goal is to explain not just *what* each step is, but *why* it is a critical engineering challenge in the journey to creating a functional and manufacturable chip.
 
 #### **Register-Transfer Level (RTL)**
-*   **What It Is:** A high-level hardware description language (HDL) like Verilog or VHDL is used to describe a digital circuit's behavior in terms of data flow between registers. It's the primary "source code" for a chip.
+*   **What It Is:** A high-level hardware description language (HDL) like Verilog is used to describe a digital circuit's behavior in terms of data flow between registers. It's the primary "source code" for a chip.
 *   **Why It Matters:** RTL is the blueprint that captures the intended functionality of the SoC. A well-written, synthesizable RTL is the non-negotiable starting point for the entire physical design process.
 
 #### **Standard Cell Library**
@@ -83,11 +83,7 @@ This section demystifies the key terminology and crucial stages of the RTL-to-GD
 
 #### **Clock Tree Synthesis (CTS)**
 *   **What It Is:** The process of building a dedicated network of buffers and inverters to distribute the clock signal to every flip-flop on the chip.
-*   **Why It Matters:** This is the "heartbeat" of the chip. The goal of CTS is to deliver the clock edge to all sequential elements at the same time (i.e., with minimal **skew**). A poor clock tree is one of the most common causes of timing failures and a non-functional chip.
-
-#### **Routing Congestion**
-*   **What It Is:** A situation where there are too many wires that need to pass through a small area of the chip, exceeding the available space on the metal layers.
-*   **Why It Matters:** High congestion makes it impossible for the router to complete all connections, leading to design errors. It's a key challenge that must be managed through good floorplanning and placement.
+*   **Why It Matters:** This is the "heartbeat" of the chip. The goal of CTS is to deliver the clock edge to all sequential elements at the same time (i.e., with minimal **skew**). A poor clock tree is one of the most common causes of timing failures.
 
 #### **GDSII (Graphic Data System II)**
 *   **What It Is:** The final output file of the physical design process. It's a binary database format that contains the exact geometric representation of every layer of the chip, ready to be sent to the foundry for manufacturing.
@@ -96,17 +92,11 @@ This section demystifies the key terminology and crucial stages of the RTL-to-GD
 #### **Sign-off Verification**
 This is the final "exam" for the design, a series of rigorous checks to guarantee correctness and manufacturability.
 
-*   **Static Timing Analysis (STA):**
-    *   **What It Is:** An exhaustive analysis that checks every possible timing path in the design without running simulations. It verifies that the design meets **Setup Time** (data must be stable *before* the clock edge) and **Hold Time** (data must be stable *after* the clock edge).
-    *   **Why It Matters:** STA is the primary method for guaranteeing a chip will operate at its target frequency. A design is not "closed" or "clean" until it passes STA with zero violations.
+*   **Static Timing Analysis (STA):** Verifies that the design meets **Setup Time** (data must be stable *before* the clock edge) and **Hold Time** (data must be stable *after* the clock edge) for all paths. STA is the primary method for guaranteeing a chip will operate at its target frequency.
 
-*   **Design Rule Check (DRC):**
-    *   **What It Is:** A check that ensures the layout adheres to hundreds of geometric rules specified by the foundry (e.g., minimum wire spacing, minimum width).
-    *   **Why It Matters:** These rules prevent physical manufacturing defects like short circuits or open circuits. A single DRC error can make a chip completely non-functional.
+*   **Design Rule Check (DRC):** Ensures the layout adheres to hundreds of geometric rules specified by the foundry (e.g., minimum wire spacing, minimum width). These rules prevent physical manufacturing defects.
 
-*   **Layout Versus Schematic (LVS):**
-    *   **What It Is:** An electrical check that compares the final layout's extracted netlist against the original, post-synthesis netlist.
-    *   **Why It Matters:** LVS provides the ultimate confirmation that the physical design is an exact electrical match to the logical design, with no accidental shorts or opens introduced during the PnR process.
+*   **Layout Versus Schematic (LVS):** An electrical check that compares the final layout's extracted netlist against the original, post-synthesis netlist. LVS provides the ultimate confirmation that the physical design is an exact electrical match to the logical design.
 
 ---
 
