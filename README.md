@@ -53,7 +53,7 @@ The physical design was executed using the structured, automated stages within t
 *   **Clock Tree Synthesis (CTS):** A balanced clock tree was constructed to deliver the clock signal to all sequential elements with minimal skew, a fundamental requirement for a synchronous digital system.
 
 [![Placement View](path/to/your/placement_view.png)
-](https://github.com/gundrathivinodkumar2409/Digital-VLSI-SoC-Design-and-Planning/blob/57118d59ba265950ff7703e68c21f4205ddf3ffa/22.png))***Figure 3: The design post-placement, with all 18,508 standard cells legally positioned.***
+](https://github.com/gundrathivinodkumar2409/Digital-VLSI-SoC-Design-and-Planning/blob/57118d59ba265950ff7703e68c21f4205ddf3ffa/22.png)***Figure 3: The design post-placement, with all 18,508 standard cells legally positioned.***
 
 #### **Stage 3: Routing and Final Integration**
 *   **Routing:** All logical connections in the netlist were transformed into physical metal interconnects using a multi-stage global and detailed router. This step meticulously avoids shorts and opens while adhering to all design rules.
