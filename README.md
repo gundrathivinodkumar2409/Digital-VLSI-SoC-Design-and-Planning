@@ -12,7 +12,7 @@ End-to-end physical design of a RISC-V SoC using the OpenLane flow on the open-s
 
 ### **1. Project Synopsis**
 
-This repository showcases the complete **RTL-to-GDSII physical design implementation** of a RISC-V SoC. Leveraging the fully automated **OpenLane** framework and the open-source **SkyWater 130nm PDK**, this project translates a behavioral Verilog description into a manufacturable, sign-off clean layout. The primary objective was to master the modern digital ASIC workflow, demonstrating a deep, hands-on understanding of the engineering trade-offs required to bridge the gap between logical design and physical reality while meeting aggressive performance, power, and area (PPA) targets.
+This repository documents the successful **RTL-to-GDSII physical design implementation** of a RISC-V SoC, serving as a capstone project for the intensive "Digital VLSI SoC Design" workshop guided by the [VLSI System Design (VSD) team]( https://www.vlsisystemdesign.com/). Leveraging the **OpenLane** automated framework and the open-source **SkyWater 130nm PDK**, this work translates a complex RISC-V core from abstract Verilog into a tangible, manufacturable, and timing-clean GDSII layout. It showcases a mastery of the modern digital ASIC workflow and the engineering discipline required to meet aggressive Performance, Power, and Area (PPA) targets.
 
 ---
 
